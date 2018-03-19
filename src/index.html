@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Soundboard</title>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+   
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+      @font-face {
+        font-family: 'Material Icons';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Material Icons'),
+            local('MaterialIcons-Regular'),
+            url(MaterialIcons-Regular.woff2) format('woff2');
+      }
+
+      .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;  /* Preferred icon size */
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+
+        /* Support for all WebKit browsers. */
+        -webkit-font-smoothing: antialiased;
+        /* Support for Safari and Chrome. */
+        text-rendering: optimizeLegibility;
+      }
+
+
+      body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      background: #455a64;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <main id="soundboard"></main>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l18">
+            <h5 class="white-text">Info</h5>
+            <p class="grey-text text-lighten-4">Select a directory or individual files. Assign keys to each file and press the key to play the corresponding sound..</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2018 Seba Kerckhof
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+  import Vue from 'vue';
+  import Soundboard from './app';
+ 
+  const soundboard = new Vue(Soundboard).$mount('#soundboard');
+
+  </script>
+</html>
